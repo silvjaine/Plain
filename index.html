@@ -4,252 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Plain</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        body {
-            padding-top: 75px;
-        }
-    </style>
+    <title>Plain</title>
 </head>
+<header>
+<nav id="navbar">
+  <i class="fa-solid fa-cake-candles" id= "nav_logo">Plain</i>
 
-<body>
+<ul id="nav_list">
 
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Plain</a>
+<li class= nav-item>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar">
-
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title">Menu</h5>
-
-                <button type="button" class="btn-close btn-close-white"
-                    data-bs-dismiss="offcanvas"></button>
-            </div>
-
-            <div class="offcanvas-body">
-
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#inicio">Início</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sobre">Sobre</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#produtos">Produtos</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#galeria">Galeria</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contato">Contato</a>
-                    </li>
-
-                </ul>
-
-                <form class="d-flex mt-3 mt-lg-0 me-lg-2">
-                    <input class="form-control me-2" type="search"
-                        placeholder="Buscar doce...">
-
-                    <button class="btn btn-outline-success">
-                        Buscar
-                    </button>
-                </form>
-
-                <button class="btn btn-primary mt-2 mt-lg-0">
-                    Entrar
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-</nav>
-
-<div class="container">
-
-<h1 id="inicio">Bem-vindo à Plain</h1>
-
-<p>
-Doces artesanais preparados com carinho para tornar cada momento ainda mais especial.
-</p>
-
-<button class="btn btn-primary">
-Conheça nossos produtos
-</button>
-
-</div>
-
-<div class="container text-center my-4">
-
-<div class="row row-cols-4">
-
-<div class="col">Bolos</div>
-
-<div class="col">Cupcakes</div>
-
-<div class="col">Tortas</div>
-
-<div class="col">Doces Finos</div>
-
-</div>
-
-</div>
-
-<div class="card my-4" style="width: 18rem;" id="produtos">
-
-<img src="imagens/bolo.jpg"
-class="card-img-top"
-alt="Bolo Supremo">
-
-<div class="card-body">
-
-<h5 class="card-title">
-Bolo Supremo
-</h5>
-
-<p class="card-text">
-Massa fofinha de cacau com recheio de brigadeiro artesanal.
-</p>
-
-</div>
-
-<ul class="list-group list-group-flush">
-
-<li class="list-group-item">
-Tamanho: Médio (15 fatias)
+<a href="#home">Início</a>
+<a href="#menu">Cardápio</a>
+<a href="#tesmimonials">Avaliações</a>
 </li>
-
-<li class="list-group-item">
-Entrega rápida
-</li>
-
-<li class="list-group-item">
-Preço: R$ 85,00
-</li>
-
 </ul>
 
-<div class="card-body">
-
-<a href="#" class="card-link">
-Fazer Pedido
-</a>
-
-<a href="#" class="card-link">
-Mais Detalhes
-</a>
-
-</div>
-
-</div>
-
-<div class="clearfix my-4" id="galeria">
-
-<img src="imagens/donuts.jpg"
-class="rounded float-start"
-style="width:45%; max-height:250px; object-fit:cover;"
-alt="Donuts">
-
-<img src="imagens/cupcakes.jpg"
-class="rounded float-end"
-style="width:45%; max-height:250px; object-fit:cover;"
-alt="Cupcakes">
-
-</div>
-
-<form class="my-4 p-3 border rounded bg-light" id="contato">
-
-<div class="mb-3">
-
-<label class="form-label">
-Endereço de E-mail
-</label>
-
-<input type="email"
-class="form-control">
-
-<div class="form-text">
-Nós nunca compartilharemos seu e-mail.
-</div>
-
-</div>
-
-<div class="mb-3">
-
-<label class="form-label">
-Sua Mensagem
-</label>
-
-<textarea class="form-control"
-rows="3"
-placeholder="Digite sua dúvida ou encomenda..."></textarea>
-
-</div>
-
-<div class="mb-3 form-check">
-
-<input class="form-check-input"
-type="checkbox">
-
-<label class="form-check-label">
-Desejo receber promoções por e-mail.
-</label>
-
-</div>
-
-<button class="btn btn-primary">
-Enviar Mensagem
+<button classe="btn-default">
+Peça aqui
 </button>
 
-</form>
+<button id= "mobile_btn">
+<i class= "fa-solid fa-bars"></i>
 
-<div class="my-4">
+</button>
 
-<button class="btn btn-outline-primary">Bolos</button>
+</nav>
+<div id="mobile_menu">
 
-<button class="btn btn-outline-secondary">Cupcakes</button>
+<ul id="mobile_nav_list">
 
-<button class="btn btn-outline-success">Tortas</button>
+<li class= nav-item>
 
-<button class="btn btn-outline-danger">Promoções</button>
+<a href="#home">Início</a>
+<a href="#menu">Cardápio</a>
+<a href="#tesmimonials">Avaliações</a>
+</li>
+</ul>
 
-<button class="btn btn-outline-warning">Novidades</button>
-
-<button class="btn btn-outline-info">Contato</button>
-
-<button class="btn btn-outline-dark">Instagram</button>
-
+<button classe="btn-default">
+Peça aqui
+</button>
 </div>
 
-<footer class="bg-dark text-white text-center p-3 mt-5">
+</header>
 
-© 2026 Plain Confeitaria - Todos os direitos reservados.
-
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
+<body>
 </body>
-
-</html>
