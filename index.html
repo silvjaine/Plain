@@ -2,19 +2,24 @@
 <head>
      <title>Plain</title>
      <link href="https://jsdelivr.net" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+     <style>
+         /* Pequeno ajuste para o conteúdo não ficar escondido atrás do menu fixo */
+         body { padding-top: 75px; }
+     </style>
 </head>
 <body>
 
-<nav class="navbar bg-body-tertiary fixed-top">
+<!-- MENU DO TOPO: Modificado com as classes dos 5 desafios -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Plain</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -31,13 +36,18 @@
             <a class="nav-link" href="#">Galeria</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#">Contato</a>
           </li>
         </ul>
-        <form class="d-flex mt-3" role="search">
+        <form class="d-flex mt-3 mt-lg-0 me-lg-2" role="search">
           <input class="form-control me-2" type="search" placeholder="Buscar doce..." aria-label="Search"/>
           <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>
+        <!-- Botão Entrar adicionado à direita -->
+        <button class="btn btn-primary mt-2 mt-lg-0" type="button">Entrar</button>
       </div>
     </div>
   </div>
@@ -46,6 +56,71 @@
 <h1>Plain</h1>
 <p>Essa aqui é uma tag de texto</p>
 <button>botão</button>
+
+<!-- Bloco de Colunas escolhido por você -->
+<div class="container text-center my-4">
+  <div class="row row-cols-4">
+    <div class="col">Coluna 1</div>
+    <div class="col">Coluna 2</div>
+    <div class="col">Coluna 3</div>
+    <div class="col">Coluna 4</div>
+  </div>
+</div>
+
+<!-- Card com as informações da confeitaria -->
+<div class="card my-4" style="width: 18rem;">
+  <img src="https://unsplash.com" class="card-img-top" alt="Bolo de Chocolate Cremoso">
+  <div class="card-body">
+    <h5 class="card-title">Bolo Supremo</h5>
+    <p class="card-text">Massa fofinha de cacau 100% com muito recheio de brigadeiro artesanal.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Tamanho: Médio (15 fatias)</li>
+    <li class="list-group-item">Entrega rápida na região</li>
+    <li class="list-group-item">Preço: R$ 85,00</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Fazer Pedido</a>
+    <a href="#" class="card-link">Mais Detalhes</a>
+  </div>
+</div>
+
+<!-- Bloco da Galeria escolhido por você (com fotos reais de exemplo) -->
+<div class="clearfix my-4">
+  <img src="https://unsplash.com" class="rounded float-start" alt="Donuts" style="width: 45%; max-height: 250px; object-fit: cover;">
+  <img src="https://unsplash.com" class="rounded float-end" alt="Cupcakes" style="width: 45%; max-height: 250px; object-fit: cover;">
+</div>
+
+<!-- Formulário com informações traduzidas para Contato -->
+<form class="my-4 p-3 border rounded bg-light">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Endereço de E-mail</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">Nós nunca compartilharemos seu e-mail com mais ninguém.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputMessage" class="form-label">Sua Mensagem</label>
+    <textarea class="form-control" id="exampleInputMessage" rows="3" placeholder="Digite sua dúvida ou encomenda..."></textarea>
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Desejo receber promoções por e-mail</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+</form>
+
+<!-- Botões com estilo Outline -->
+<div class="my-4">
+  <button type="button" class="btn btn-outline-primary">Primary</button>
+  <button type="button" class="btn btn-outline-secondary">Secondary</button>
+  <button type="button" class="btn btn-outline-success">Success</button>
+  <button type="button" class="btn btn-outline-danger">Danger</button>
+  <button type="button" class="btn btn-outline-warning">Warning</button>
+  <button type="button" class="btn btn-outline-info">Info</button>
+  <button type="button" class="btn btn-outline-light">Light</button>
+  <button type="button" class="btn btn-outline-dark">Dark</button>
+</div>
+
      <script src="https://jsdelivr.net" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
