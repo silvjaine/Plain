@@ -1,23 +1,18 @@
-<html>
+ <html>
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Plain</title>
-     <!-- CDN Oficial e Estável do Bootstrap 5.3.3 (Corrige o bug visual) -->
-     <link href="https://jsdelivr.net" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <link href="https://jsdelivr.net" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
      <style>
-         /* Garante que o conteúdo comece abaixo da barra fixa no topo */
-         body { padding-top: 85px; background-color: #f8f9fa; }
-         /* Ajuste para as imagens não quebrarem o layout se sumirem */
-         .img-ajustada { width: 100%; height: 200px; object-fit: cover; background-color: #e9ecef; }
+         /* Pequeno ajuste para o conteúdo não ficar escondido atrás do menu fixo */
+         body { padding-top: 75px; }
      </style>
 </head>
 <body>
 
-<!-- MENU DO TOPO (Desafios aplicados com cores corrigidas) -->
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top shadow-sm">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Plain</a>
+<!-- MENU DO TOPO: Modificado com as classes dos 5 desafios -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Plain</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -47,112 +42,86 @@
             <a class="nav-link" href="#">Contato</a>
           </li>
         </ul>
-        <form class="d-flex mt-3 mt-lg-0 me-lg-3" role="search">
+        <form class="d-flex mt-3 mt-lg-0 me-lg-2" role="search">
           <input class="form-control me-2" type="search" placeholder="Buscar doce..." aria-label="Search"/>
           <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>
-        <button class="btn btn-primary mt-2 mt-lg-0 px-4" type="button">Entrar</button>
+        <!-- Botão Entrar adicionado à direita -->
+        <button class="btn btn-primary mt-2 mt-lg-0" type="button">Entrar</button>
       </div>
     </div>
   </div>
 </nav>
 
-<!-- CONTEÚDO PRINCIPAL (Envelopado em um container para dar espaçamento profissional) -->
-<main class="container my-4">
+<h1>Plain</h1>
+<p>Essa aqui é uma tag de texto</p>
+<button>botão</button>
 
-    <div class="bg-white p-4 rounded shadow-sm mb-4">
-        <h1 class="display-5 fw-bold text-dark">Plain</h1>
-        <p class="lead text-muted">Essa aqui é uma tag de texto</p>
-        <button class="btn btn-dark">botão</button>
-    </div>
+<!-- Bloco de Colunas escolhido por você -->
+<div class="container text-center my-4">
+  <div class="row row-cols-4">
+    <div class="col">Coluna 1</div>
+    <div class="col">Coluna 2</div>
+    <div class="col">Coluna 3</div>
+    <div class="col">Coluna 4</div>
+  </div>
+</div>
 
-    <!-- Bloco de Colunas -->
-    <div class="card p-3 mb-4 shadow-sm text-center">
-      <div class="row row-cols-2 row-cols-md-4 g-3">
-        <div class="col"><div class="p-2 bg-light rounded fw-bold border">Coluna 1</div></div>
-        <div class="col"><div class="p-2 bg-light rounded fw-bold border">Coluna 2</div></div>
-        <div class="col"><div class="p-2 bg-light rounded fw-bold border">Coluna 3</div></div>
-        <div class="col"><div class="p-2 bg-light rounded fw-bold border">Coluna 4</div></div>
-      </div>
-    </div>
+<!-- Card com as informações da confeitaria -->
+<div class="card my-4" style="width: 18rem;">
+  <img src="https://unsplash.com" class="card-img-top" alt="Bolo de Chocolate Cremoso">
+  <div class="card-body">
+    <h5 class="card-title">Bolo Supremo</h5>
+    <p class="card-text">Massa fofinha de cacau 100% com muito recheio de brigadeiro artesanal.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Tamanho: Médio (15 fatias)</li>
+    <li class="list-group-item">Entrega rápida na região</li>
+    <li class="list-group-item">Preço: R$ 85,00</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Fazer Pedido</a>
+    <a href="#" class="card-link">Mais Detalhes</a>
+  </div>
+</div>
 
-    <!-- Card de Produto -->
-    <div class="card mb-4 shadow-sm mx-auto mx-md-0" style="max-width: 18rem;">
-      <img src="https://unsplash.com" class="card-img-top img-ajustada" alt="Bolo de Chocolate Cremoso">
-      <div class="card-body">
-        <h5 class="card-title fw-bold">Bolo Supremo</h5>
-        <p class="card-text text-muted small">Massa fofinha de cacau 100% com muito recheio de brigadeiro artesanal.</p>
-      </div>
-      <ul class="list-group list-group-flush small">
-        <li class="list-group-item">Tamanho: Médio (15 fatias)</li>
-        <li class="list-group-item">Entrega rápida na região</li>
-        <li class="list-group-item">Preço: R$ 85,00</li>
-      </ul>
-      <div class="card-body">
-        <a href="#" class="card-link fw-bold">Fazer Pedido</a>
-        <a href="#" class="card-link text-secondary">Mais Detalhes</a>
-      </div>
-    </div>
+<!-- Bloco da Galeria escolhido por você (com fotos reais de exemplo) -->
+<div class="clearfix my-4">
+  <img src="https://unsplash.com" class="rounded float-start" alt="Donuts" style="width: 45%; max-height: 250px; object-fit: cover;">
+  <img src="https://unsplash.com" class="rounded float-end" alt="Cupcakes" style="width: 45%; max-height: 250px; object-fit: cover;">
+</div>
 
-    <!-- Bloco da Galeria -->
-    <div class="card p-3 mb-4 shadow-sm">
-        <h5 class="fw-bold mb-3">Galeria de Destaques</h5>
-        <div class="row g-3">
-          <div class="col-6">
-              <img src="https://unsplash.com" class="rounded img-ajustada shadow-sm" alt="Donuts">
-          </div>
-          <div class="col-6">
-              <img src="https://unsplash.com" class="rounded img-ajustada shadow-sm" alt="Cupcakes">
-          </div>
-        </div>
-    </div>
+<!-- Formulário com informações traduzidas para Contato -->
+<form class="my-4 p-3 border rounded bg-light">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Endereço de E-mail</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">Nós nunca compartilharemos seu e-mail com mais ninguém.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputMessage" class="form-label">Sua Mensagem</label>
+    <textarea class="form-control" id="exampleInputMessage" rows="3" placeholder="Digite sua dúvida ou encomenda..."></textarea>
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Desejo receber promoções por e-mail</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+</form>
 
-    <!-- Formulário de Contato -->
-    <form class="mb-4 p-4 border rounded bg-white shadow-sm">
-      <h5 class="fw-bold mb-3">Fale Conosco</h5>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label fw-bold">Endereço de E-mail</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="nome@exemplo.com">
-        <div id="emailHelp" class="form-text">Nós nunca compartilharemos seu e-mail com mais ninguém.</div>
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputMessage" class="form-label fw-bold">Sua Mensagem</label>
-        <textarea class="form-control" id="exampleInputMessage" rows="3" placeholder="Digite sua dúvida ou encomenda..."></textarea>
-      </div>
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label text-muted small" for="exampleCheck1">Desejo receber promoções por e-mail</label>
-      </div>
-      <button type="submit" class="btn btn-primary px-4 fw-bold">Enviar Mensagem</button>
-    </form>
+<!-- Botões com estilo Outline -->
+<div class="my-4">
+  <button type="button" class="btn btn-outline-primary">Primary</button>
+  <button type="button" class="btn btn-outline-secondary">Secondary</button>
+  <button type="button" class="btn btn-outline-success">Success</button>
+  <button type="button" class="btn btn-outline-danger">Danger</button>
+  <button type="button" class="btn btn-outline-warning">Warning</button>
+  <button type="button" class="btn btn-outline-info">Info</button>
+  <button type="button" class="btn btn-outline-light">Light</button>
+  <button type="button" class="btn btn-outline-dark">Dark</button>
+</div>
 
-    <!-- Linha de Botões Estilizados -->
-    <div class="card p-3 mb-4 shadow-sm d-flex flex-wrap gap-2 justify-content-center">
-      <button type="button" class="btn btn-outline-primary btn-sm">Primary</button>
-      <button type="button" class="btn btn-outline-secondary btn-sm">Secondary</button>
-      <button type="button" class="btn btn-outline-success btn-sm">Success</button>
-      <button type="button" class="btn btn-outline-danger btn-sm">Danger</button>
-      <button type="button" class="btn btn-outline-warning btn-sm">Warning</button>
-      <button type="button" class="btn btn-outline-info btn-sm">Info</button>
-      <button type="button" class="btn btn-outline-light btn-sm text-dark">Light</button>
-      <button type="button" class="btn btn-outline-dark btn-sm">Dark</button>
-    </div>
-
-</main>
-
-<!-- RODAPÉ OBRIGATÓRIO (Com seus dados salvos) -->
-<footer class="bg-dark text-white text-center py-4 mt-5">
-    <div class="container">
-        <p class="mb-1 fw-bold">🧁 Plain - Confeitaria Artesanal</p>
-        <p class="mb-0 small text-secondary">
-            Aluna: <strong>Jaine Silva de Lima</strong> | N°: <strong>40</strong> | Turma: <strong>2 A Téc</strong>
-        </p>
-        <hr class="border-secondary my-3">
-        <p class="small text-secondary mb-0">&copy; 2026 Projeto de Férias. Todos os direitos reservados.</p>
-    </div>
-</footer>
-
-     <!-- Script Oficial Atualizado do Bootstrap 5.3.3 -->
-     <script src="https://jsdelivr.net" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     <script src="https://jsdelivr.net" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
+
