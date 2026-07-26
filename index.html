@@ -59,15 +59,23 @@
       text-align: center;
     }
 
-    /* Imagens responsivas */
-    .card-img-top {
+    /* SVG Container */
+    .svg-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #DDA15E 0%, #BC6C25 100%);
       height: 250px;
-      object-fit: cover;
+      border-radius: 8px 8px 0 0;
     }
 
-    .carousel-inner img {
+    .carousel-svg-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #DDA15E 0%, #BC6C25 100%);
       height: 400px;
-      object-fit: cover;
+      width: 100%;
     }
   </style>
 </head>
@@ -138,13 +146,60 @@
   <div id="carouselExampleFade" class="carousel slide carousel-fade mb-4">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80" class="d-block w-100" alt="Bolo de chocolate">
+        <div class="carousel-svg-container">
+          <svg width="300" height="300" viewBox="0 0 300 300">
+            <!-- Bolo de Chocolate -->
+            <rect x="75" y="100" width="150" height="120" fill="#6B4423" rx="5"/>
+            <ellipse cx="150" cy="100" rx="75" ry="30" fill="#8B5A3C"/>
+            <ellipse cx="150" cy="220" rx="75" ry="25" fill="#5A2F1A"/>
+            
+            <!-- Cobertura -->
+            <circle cx="100" cy="60" r="15" fill="#8B4513"/>
+            <circle cx="150" cy="45" r="18" fill="#8B4513"/>
+            <circle cx="200" cy="60" r="15" fill="#8B4513"/>
+            
+            <!-- Texto -->
+            <text x="150" y="280" font-size="24" font-weight="bold" text-anchor="middle" fill="#4A3E3D">Bolo de Chocolate</text>
+          </svg>
+        </div>
       </div>
       <div class="carousel-item">
-        <img src="https://images.unsplash.com/photo-1568299869439-92e37166ef02?w=800&q=80" class="d-block w-100" alt="Torta de frutas">
+        <div class="carousel-svg-container">
+          <svg width="300" height="300" viewBox="0 0 300 300">
+            <!-- Torta -->
+            <polygon points="150,50 220,200 80,200" fill="#D4A574"/>
+            <ellipse cx="150" cy="200" rx="70" ry="30" fill="#C29060"/>
+            
+            <!-- Frutas -->
+            <circle cx="120" cy="140" r="12" fill="#FF6B6B"/>
+            <circle cx="150" cy="130" r="12" fill="#FFE66D"/>
+            <circle cx="180" cy="140" r="12" fill="#FF6B6B"/>
+            <circle cx="135" cy="170" r="12" fill="#FFE66D"/>
+            <circle cx="165" cy="170" r="12" fill="#FF6B6B"/>
+            
+            <!-- Texto -->
+            <text x="150" y="280" font-size="24" font-weight="bold" text-anchor="middle" fill="#4A3E3D">Torta de Frutas</text>
+          </svg>
+        </div>
       </div>
       <div class="carousel-item">
-        <img src="https://images.unsplash.com/photo-1585080307659-df26bb76e862?w=800&q=80" class="d-block w-100" alt="Doces sortidos">
+        <div class="carousel-svg-container">
+          <svg width="300" height="300" viewBox="0 0 300 300">
+            <!-- Alfajor -->
+            <rect x="80" y="100" width="140" height="60" fill="#D4A574" rx="5"/>
+            <rect x="80" y="95" width="140" height="10" fill="#8B7355"/>
+            <rect x="80" y="160" width="140" height="10" fill="#8B7355"/>
+            
+            <!-- Cobertura de chocolate -->
+            <ellipse cx="150" cy="100" rx="70" ry="15" fill="#6B4423"/>
+            
+            <!-- Doce de leite visível -->
+            <rect x="90" y="115" width="120" height="30" fill="#C4893A" opacity="0.7"/>
+            
+            <!-- Texto -->
+            <text x="150" y="280" font-size="24" font-weight="bold" text-anchor="middle" fill="#4A3E3D">Alfajor Delicioso</text>
+          </svg>
+        </div>
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -180,7 +235,19 @@
 
     <div class="card-group my-4">
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&q=80" class="card-img-top" alt="Bolos">
+        <div class="svg-container">
+          <svg width="200" height="200" viewBox="0 0 200 200">
+            <!-- Bolo -->
+            <rect x="50" y="70" width="100" height="80" fill="#6B4423" rx="3"/>
+            <ellipse cx="100" cy="70" rx="50" ry="20" fill="#8B5A3C"/>
+            <ellipse cx="100" cy="150" rx="50" ry="18" fill="#5A2F1A"/>
+            
+            <!-- Cobertura -->
+            <circle cx="70" cy="45" r="10" fill="#8B4513"/>
+            <circle cx="100" cy="35" r="12" fill="#8B4513"/>
+            <circle cx="130" cy="45" r="10" fill="#8B4513"/>
+          </svg>
+        </div>
         <div class="card-body">
           <h5 class="card-title">Bolos</h5>
           <p class="card-text">Nossos bolos são feitos com ingredientes de qualidade e muito amor. Sabores clássicos e inovadores para todos os gostos.</p>
@@ -188,7 +255,18 @@
         </div>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1568299869439-92e37166ef02?w=500&q=80" class="card-img-top" alt="Tortas">
+        <div class="svg-container">
+          <svg width="200" height="200" viewBox="0 0 200 200">
+            <!-- Torta -->
+            <polygon points="100,40 150,130 50,130" fill="#D4A574"/>
+            <ellipse cx="100" cy="130" rx="50" ry="20" fill="#C29060"/>
+            
+            <!-- Frutas -->
+            <circle cx="80" cy="95" r="8" fill="#FF6B6B"/>
+            <circle cx="100" cy="88" r="8" fill="#FFE66D"/>
+            <circle cx="120" cy="95" r="8" fill="#FF6B6B"/>
+          </svg>
+        </div>
         <div class="card-body">
           <h5 class="card-title">Tortas</h5>
           <p class="card-text">Tortas sofisticadas e deliciosas para suas celebrações. Frutas frescas e coberturas irresistíveis.</p>
@@ -196,7 +274,20 @@
         </div>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1585080307659-df26bb76e862?w=500&q=80" class="card-img-top" alt="Alfajores">
+        <div class="svg-container">
+          <svg width="200" height="200" viewBox="0 0 200 200">
+            <!-- Alfajor -->
+            <rect x="55" y="80" width="90" height="40" fill="#D4A574" rx="3"/>
+            <rect x="55" y="75" width="90" height="8" fill="#8B7355"/>
+            <rect x="55" y="120" width="90" height="8" fill="#8B7355"/>
+            
+            <!-- Cobertura -->
+            <ellipse cx="100" cy="75" rx="45" ry="10" fill="#6B4423"/>
+            
+            <!-- Doce de leite -->
+            <rect x="65" y="93" width="70" height="18" fill="#C4893A" opacity="0.7"/>
+          </svg>
+        </div>
         <div class="card-body">
           <h5 class="card-title">Alfajores e Doces</h5>
           <p class="card-text">Alfajores crocantes com doce de leite, pão de mel e outras delícias. Perfeitos para presentear.</p>
