@@ -59,16 +59,15 @@
       text-align: center;
     }
 
-    /* Placeholder para imagens faltando */
-    .img-placeholder {
-      background: linear-gradient(135deg, #DDA15E 0%, #BC6C25 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      min-height: 300px;
+    /* Imagens responsivas */
+    .card-img-top {
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .carousel-inner img {
+      height: 400px;
+      object-fit: cover;
     }
   </style>
 </head>
@@ -139,13 +138,13 @@
   <div id="carouselExampleFade" class="carousel slide carousel-fade mb-4">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <div class="img-placeholder">🍰 Bolo de Chocolate</div>
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80" class="d-block w-100" alt="Bolo de chocolate">
       </div>
       <div class="carousel-item">
-        <div class="img-placeholder">🥧 Torta Deliciosa</div>
+        <img src="https://images.unsplash.com/photo-1568299869439-92e37166ef02?w=800&q=80" class="d-block w-100" alt="Torta de frutas">
       </div>
       <div class="carousel-item">
-        <div class="img-placeholder">🍫 Pão de Mel</div>
+        <img src="https://images.unsplash.com/photo-1585080307659-df26bb76e862?w=800&q=80" class="d-block w-100" alt="Doces sortidos">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -181,7 +180,7 @@
 
     <div class="card-group my-4">
       <div class="card">
-        <div class="img-placeholder">🎂 Bolos</div>
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&q=80" class="card-img-top" alt="Bolos">
         <div class="card-body">
           <h5 class="card-title">Bolos</h5>
           <p class="card-text">Nossos bolos são feitos com ingredientes de qualidade e muito amor. Sabores clássicos e inovadores para todos os gostos.</p>
@@ -189,7 +188,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="img-placeholder">🥐 Tortas</div>
+        <img src="https://images.unsplash.com/photo-1568299869439-92e37166ef02?w=500&q=80" class="card-img-top" alt="Tortas">
         <div class="card-body">
           <h5 class="card-title">Tortas</h5>
           <p class="card-text">Tortas sofisticadas e deliciosas para suas celebrações. Frutas frescas e coberturas irresistíveis.</p>
@@ -197,10 +196,10 @@
         </div>
       </div>
       <div class="card">
-        <div class="img-placeholder">🍫 Pão de Mel</div>
+        <img src="https://images.unsplash.com/photo-1585080307659-df26bb76e862?w=500&q=80" class="card-img-top" alt="Alfajores">
         <div class="card-body">
-          <h5 class="card-title">Pão de Mel</h5>
-          <p class="card-text">Pão de mel tradicional com chocolate derretido. Perfeito para presentear e para suas próprias indulgências.</p>
+          <h5 class="card-title">Alfajores e Doces</h5>
+          <p class="card-text">Alfajores crocantes com doce de leite, pão de mel e outras delícias. Perfeitos para presentear.</p>
           <p class="card-text"><small class="text-body-secondary">Encomende agora</small></p>
         </div>
       </div>
